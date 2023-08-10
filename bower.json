@@ -1,0 +1,17 @@
+{
+  "name": "adapt-trialogue",
+  "version": "1.0.0",
+  "framework": ">=5.19.2",
+  "homepage": "https://github.com/nachocinalli/adapt-trialogue",
+  "bugs": "https://github.com/nachocinalli/adapt-trialogue/issues",
+  "component" : "trialogue",
+  "targetAttribute": "_trialogue",
+  "displayName" : "Trialogue",
+  "description": "A trialogue component",
+  "main": "/js/adapt-trialogue.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "license": "GPL-3.0"
+}

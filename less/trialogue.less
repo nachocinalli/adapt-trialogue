@@ -1,0 +1,64 @@
+.trialogue {
+  &__widget {
+    display: flex;
+    //min-height: 24rem;//calc(100vh - 12rem);
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ccc;
+    overflow: hidden;
+  }
+  &__messages-history, &__message {
+    flex: 100%;
+  }
+  &__message-guest {
+    text-align: right;
+    background-color: #e6e6e6;
+  }
+  &__message-meta {
+    text-align: center;
+    color: #666;
+  }
+  &__message-host {
+    text-align: left;
+    background-color: #f2f2f2;
+  }
+  &__message__inner,
+  &__messages-history__inner {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  &__bottom-bar {
+    position: fixed;
+    bottom: 1rem;
+   
+    width: 100%;
+    background-color: #ccc;
+    @media (min-width: 900px) {
+      max-width: 885px;
+      margin: 0 auto;
+    }
+  }
+  &__bottom-bar__buttons {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    align-items: center;
+    .btn-text {
+      background-color: #e6e6e6;
+      color: #666;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      .no-touch &:not(.is-disabled):not(.is-locked):hover {
+        background-color: #e6e6e6;
+        color: #222;
+      }
+      &.is-disabled {
+        visibility: hidden;
+      }
+    }
+  }
+  
+}

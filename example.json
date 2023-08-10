@@ -1,0 +1,15 @@
+    {
+        "_id": "c-05",
+        "_parentId": "b-05",
+        "_type": "component",
+        "_component": "trialogue",
+        "_classes": "",
+        "_layout": "full",
+        "title": "Trialogue component",
+        "displayTitle": "Trialogue component",
+        "body": "",
+        "instruction": "",
+        "_pageLevelProgress": {
+            "_isEnabled": true
+        }
+    }
