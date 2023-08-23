@@ -1,6 +1,6 @@
 import React from 'react';
 import { compile, classes } from 'core/js/reactHelpers';
-export default function trialogueMessage({ message, innerRef, isAnim }) {
+export default function trialogueMessage({ message, isAnim }) {
   const { text, sender } = message;
 
   return (
@@ -9,7 +9,7 @@ export default function trialogueMessage({ message, innerRef, isAnim }) {
         'trialogue__message',
         sender === 'guest' ? 'trialogue__message-guest' : sender === '' ? 'trialogue__message-meta' : 'trialogue__message-host'
       ])}
-      ref={innerRef}
+      // ref={innerRef}
     >
       <div className='trialogue__message__inner'>
         {text && !isAnim && (

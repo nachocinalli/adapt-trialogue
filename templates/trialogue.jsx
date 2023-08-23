@@ -28,12 +28,10 @@ export default function Trialogue(props) {
 
     const animationTimeout = setTimeout(() => {
       setIsAnim(false);
-      setTimeout(() => {
-        messageRef?.current?.scrollIntoView();
-      }, 500);
     }, 1000);
 
     return () => {
+      messageRef?.current?.scrollIntoView();
       clearTimeout(animationTimeout);
     };
   }, [_items]);
@@ -41,8 +39,8 @@ export default function Trialogue(props) {
     <div className='component__inner trialogue__inner'>
       <templates.header {...props} />
       <div className='component__widget trialogue__widget'>
-        <templates.trialogueMessagesHistory messages={messagesHistory} />
-        <templates.trialogueMessage message={message} innerRef={messageRef} isAnim={isAnim} />
+        <templates.trialogueMessagesHistory messages={messagesHistory} innerRef={messageRef} />
+        <templates.trialogueMessage message={message} isAnim={isAnim} />
         <templates.trialogueBottomBar onClick={handleOnClick} activeItem={activeItem} isAnim={isAnim} />
       </div>
     </div>
