@@ -1,15 +1,23 @@
 .trialogue {
   &__widget {
     display: flex;
-    //min-height: 24rem;//calc(100vh - 12rem);
+    min-height: 280px;
     position: relative;
     flex-direction: column;
     justify-content: space-between;
     background-color: #ccc;
     overflow: hidden;
   }
-  &__messages-history, &__message {
+
+  &__messages-history,
+  &__message {
     flex: 100%;
+  }
+  &__message {
+    padding-bottom: 4rem;
+  }
+  &__messages-history {
+    padding-top: 4rem;
   }
   &__message-guest {
     text-align: right;
@@ -28,18 +36,17 @@
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
+    img {
+      min-width: auto;
+      max-width: 200px;
+    }
   }
 
   &__bottom-bar {
-    position: fixed;
-    bottom: 1rem;
-   
+    position: absolute;
+    bottom: 0;
     width: 100%;
     background-color: #ccc;
-    @media (min-width: 900px) {
-      max-width: 885px;
-      margin: 0 auto;
-    }
   }
   &__bottom-bar__buttons {
     padding: 1rem;
@@ -60,5 +67,78 @@
       }
     }
   }
-  
+  /*theme*/
+  &__message-host,
+  &__message-guest {
+    position: relative;
+  }
+  .trialogue__messages-history-sender,
+  .trialogue__message-sender {
+    &::before {
+      position: absolute;
+      content: '';
+      width: 2rem;
+      height: 2rem;
+      top: 0.5rem;
+      border-radius: 50%;
+      padding: 0.3rem;
+    }
+  }
+  &__message-host {
+    div:first-child {
+      padding-left: 1rem;
+    }
+    .trialogue__messages-history-sender,
+    .trialogue__message-sender {
+      &::before {
+        content: '';
+        background: #ccc;
+        left: 0.35rem;
+      }
+    }
+  }
+  &__message-guest {
+    div:first-child {
+      padding-right: 1rem;
+    }
+    .trialogue__messages-history-sender,
+    .trialogue__message-sender {
+      &::before {
+        content: '';
+        background: #ccc;
+        right: 0.35rem;
+      }
+    }
+  }
+  .wave {
+    position: relative;
+  }
+  .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 2px;
+    background: #ccc;
+    animation: wave 1.2s ease-in-out infinite;
+  }
+  .wave .dot:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .wave .dot:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+
+  @keyframes wave {
+    0%,
+    100%,
+    50% {
+      transform: initial;
+    }
+
+    25% {
+      transform: translateY(-15px);
+    }
+  }
 }
