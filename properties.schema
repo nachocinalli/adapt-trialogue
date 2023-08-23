@@ -75,6 +75,7 @@
 					"_options": {
 						"type": "array",
 						"required": true,
+						"title": "Options",
 						"items": {
 							"type": "object",
 							"properties": {
