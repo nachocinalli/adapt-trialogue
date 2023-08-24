@@ -1,15 +1,159 @@
+{
+  "_id": "c-05",
+  "_parentId": "b-05",
+  "_type": "component",
+  "_component": "trialogue",
+  "_classes": "",
+  "_layout": "full",
+  "title": "Trialogue component",
+  "displayTitle": "Trialogue component",
+  "body": "",
+  "instruction": "",
+  "_items": [
     {
-        "_id": "c-05",
-        "_parentId": "b-05",
-        "_type": "component",
-        "_component": "trialogue",
-        "_classes": "",
-        "_layout": "full",
-        "title": "Trialogue component",
-        "displayTitle": "Trialogue component",
-        "body": "",
-        "instruction": "",
-        "_pageLevelProgress": {
-            "_isEnabled": true
+      "id": "start",
+      "sender": "host",
+      "text": "hi! 👋",
+      "next": "item",
+      "_options": [
+        {
+          "text": "hello"
+        },
+        {
+          "text": "whatsup?!"
         }
+      ]
+    },
+    {
+      "id": "hello",
+      "sender": "",
+      "text": "this passage without speaker tag is rendered as a meta passage.",
+      "next": "item",
+      "_options": [
+        {
+          "text": "Ok"
+        }
+      ]
+    },
+    {
+      "id": "Ok",
+      "sender": "host",
+      "text": "how are you doing?",
+      "next": "item",
+      "_options": [
+        {
+          "text": "pretty good"
+        },
+        {
+          "text": "not so good"
+        }
+      ]
+    },
+    {
+      "id": "pretty good",
+      "sender": "host",
+      "text": "nice to hear!",
+      "next": "item",
+      "_options": [
+        {
+          "text": "end 1"
+        }
+      ]
+    },
+    {
+      "id": "not so good",
+      "sender": "host",
+      "text": "❤️ maybe this will brighten up your day! <img src='//placekitten.com/800/500'/>",
+      "next": "item",
+      "_options": [
+        {
+          "text": "end 2"
+        }
+      ]
+    },
+    {
+      "id": "whatsup?!",
+      "sender": "host",
+      "text": "all good in the hood...",
+      "next": "item",
+      "_options": [
+        {
+          "text": "where are you from?"
+        },
+        {
+          "text": "what is your name?"
+        }
+      ]
+    },
+    {
+      "id": "where are you from?",
+      "sender": "host",
+      "text": "I'm born on the web",
+      "next": "item",
+      "_options": [
+        {
+          "text": "end 3"
+        }
+      ]
+    },
+    {
+      "id": "what is your name?",
+      "sender": "host",
+      "text": "my name is John",
+      "next": "item",
+      "_options": [
+        {
+          "text": "end 4"
+        }
+      ]
+    },
+    {
+      "id": "end 1",
+      "sender": "",
+      "text": "Feedback end 1",
+      "next": "feedback",
+      "_options": [
+        {
+          "text": ""
+        }
+      ]
+    },
+    {
+      "id": "end 2",
+      "sender": "",
+      "text": "Feedback end 2",
+      "next": "feedback",
+      "_options": [
+        {
+          "text": ""
+        }
+      ]
+    },
+    {
+      "id": "end 3",
+      "sender": "",
+      "text": "Feedback end 3",
+      "next": "feedback",
+      "_options": [
+        {
+          "text": ""
+        }
+      ]
+    },
+
+    {
+      "id": "end 4",
+      "sender": "",
+      "text": "Feedback end 4",
+      "next": "feedback",
+      "_options": [
+        {
+          "text": ""
+        }
+      ]
     }
+  ],
+  "_pageLevelProgress": {
+    "_isEnabled": true
+  }
+}
